@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunny Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/main images/icon.png">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Боковая панель -->
+        <div class="sidebar">
+            <div class="chat-header">
+                <span>Все чаты</span>
+            </div>
+            <div class="chat-list">
+                <div class="chat-item" onclick="openChat('user1')">
+                    <img src="./images/name 1/ava_name1.png" alt="User 1"> Пользователь 1
+                </div>
+                <div class="chat-item" onclick="openChat('user2')">
+                    <img src="./images/name 2/ava_name2.png" alt="User 2"> Пользователь 2
+                </div>
+                <div class="chat-item" onclick="openChat('user3')">
+                    <img src="./images/name 3/ava_name3.png" alt="User 3"> Пользователь 3
+                </div>
+                <div class="chat-item" onclick="openChat('group')">
+                    <img src="./images/group/icon_group.png" alt="Group"> Группа
+                </div>
+                <div class="chat-item" onclick="openChat('settings')">
+                    <img src="./images/main images/settings.png" alt="Settings"> Настройки
+                </div>
+            </div>
+        </div>
+
+        <!-- Окно чата -->
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header" id="chat-header">
+                <button class="menu-button" onclick="toggleSidebar()">☰</button>
+                <span id="chat-header-name">Bunny Chat <img src="./images/main images/icon.png" id="logo-img"> </span>
+                <button class="close-chat" id="close-chat" onclick="closeChat()">×</button>
+            </div>
+            <div class="chat-messages" id="chat-messages"></div>
+            <div class="chat-input" id="chat-input"></div>
+        </div>
+    </div>
+    <script src="chatLogic.js"></script>
+</body>
+</html>

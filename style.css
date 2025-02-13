@@ -1,0 +1,434 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Темная тема */
+.dark-theme {
+    background-color: #1e1e1e; /* тёмный фон */
+    color: #d1d1d1; /* светлый цвет текста */
+}
+
+.dark-theme .chat-container {
+    background-color: #2e2e2e; /* тёмный фон чата */
+}
+
+.dark-theme .chat-header {
+    background-color: #2c2f36; /* чуть темнее для шапки */
+    border-bottom: 1px solid #444444; /* тёмная граница */
+    color: #ffffff; /* белый текст */
+}
+
+.dark-theme .chat-messages {
+    background-color: #2e2e2e; /* темный фон сообщений */
+    color: #d1d1d1; /* светлый текст */
+    overflow-y: auto; /* скроллинг */
+    padding: 10px;
+}
+
+.dark-theme .chat-input {
+    background-color: #3a3a3a; /* тёмный фон поля ввода */
+    border-top: 1px solid #444444; /* тёмная граница */
+    padding: 10px;
+}
+
+.dark-theme .chat-list {
+    background-color: #2e2e2e; /* фон списка чатов */
+    border-bottom: 1px solid #444444;
+    color: #d1d1d1;
+    padding: 10px;
+}
+
+.dark-theme .chat-item {
+    background-color: #3a3a3a; /* тёмный фон для каждого чата в списке */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dark-theme .chat-item:hover {
+    background-color: #444444; /* фон при наведении */
+}
+
+.dark-theme .chat-item .user-name {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.dark-theme .chat-item .last-message {
+    color: #a0a0a0; /* светло-серый для последнего сообщения */
+}
+
+.dark-theme button {
+    background-color: #0078ff; /* яркий синий, как в Telegram */
+    color: white; /* белый текст на кнопках */
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.dark-theme button:hover {
+    background-color: #0066cc; /* темнее синий для эффекта наведения */
+}
+
+.dark-theme button:active {
+    background-color: #005bb5; /* еще более темный синий при нажатии */
+}
+
+/* Для сообщений */
+.dark-theme .message.user {
+    background-color: #444444; /* фон сообщений от пользователя */
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.dark-theme .message.bot {
+    background-color: #555555; /* фон сообщений от бота */
+    color: #d1d1d1;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.dark-theme .settings-content {
+    color: #d1d1d1;
+}
+
+.dark-theme .settings-content button {
+    background-color: #0078ff;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.dark-theme .settings-content button:hover {
+    background-color: #0066cc;
+}
+
+/* Светлая тема */
+.light-theme {
+    background-color: #f7f7f7; /* светлый фон */
+    color: #333333; /* тёмный текст */
+}
+
+.light-theme .chat-container {
+    background-color: #ffffff; /* белый фон чата */
+}
+
+.light-theme .chat-header {
+    background-color: #e5e5e5; /* светлый фон шапки */
+    border-bottom: 1px solid #cccccc; /* светлая граница */
+    color: #4b4b4b; /* тёмный текст */
+}
+
+.light-theme .chat-messages {
+    background-color: #ffffff; /* белый фон сообщений */
+    color: #333333; /* тёмный текст */
+    overflow-y: auto; /* скроллинг */
+    padding: 10px;
+}
+
+.light-theme .chat-input {
+    background-color: #f0f0f0; /* светлый фон поля ввода */
+    border-top: 1px solid #cccccc; /* светлая граница */
+    padding: 10px;
+}
+
+.light-theme .chat-list {
+    background-color: #ffffff; /* фон списка чатов */
+    border-bottom: 1px solid #cccccc;
+    color: #333333;
+    padding: 10px;
+}
+
+.light-theme .chat-item {
+    background-color: #f9f9f9; /* светлый фон для каждого чата */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.light-theme .chat-item:hover {
+    background-color: #e5e5e5; /* фон при наведении */
+}
+
+.light-theme .chat-item .user-name {
+    font-weight: bold;
+    color: #333333; /* тёмный цвет для имени пользователя */
+}
+
+.light-theme .chat-item .last-message {
+    color: #888888; /* светло-серый для последнего сообщения */
+}
+
+.light-theme button {
+    background-color: #0078ff; /* яркий синий, как в Telegram */
+    color: white; /* белый текст на кнопках */
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.light-theme button:hover {
+    background-color: #0066cc; /* темнее синий для эффекта наведения */
+}
+
+.light-theme button:active {
+    background-color: #005bb5; /* еще более темный синий при нажатии */
+}
+
+/* Для сообщений */
+.light-theme .message.user {
+    background-color: #0078ff; /* синий фон сообщений от пользователя */
+    color: white;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.light-theme .message.bot {
+    background-color: #f0f0f0; /* светлый фон сообщений от бота */
+    color: #333333;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.light-theme .settings-content {
+    color: #333333;
+}
+
+.light-theme .settings-content button {
+    background-color: #0078ff;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.light-theme .settings-content button:hover {
+    background-color: #0066cc;
+}
+
+/* Контейнер чата */
+.chat-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Боковая панель */
+.sidebar {
+    width: 300px;
+    background: #252525;
+    border-right: 1px solid #444;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .chat-header {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    font-weight: bold;
+    background: #222;
+}
+
+/* Список чатов */
+.chat-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-item:hover {
+    background: #333;
+}
+
+.chat-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Окно чата */
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #333;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: #222;
+    border-bottom: 1px solid #444;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.close-chat {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-left: auto;
+}
+
+.close-chat:hover {
+    background: #e60000;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message.bot {
+    align-self: flex-start;
+}
+
+.message.user {
+    align-self: flex-end;
+}
+
+.chat-input {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #222;
+    border-top: 1px solid #444;
+}
+
+.chat-input button {
+    padding: 10px;
+    border: none;
+    background: #215bc7;
+    color: white;
+    cursor: pointer;
+    margin: 3px 0;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.chat-input button:hover {
+    background: #2967db;
+}
+
+/* Настройки */
+.settings-content {
+    padding: 10px;
+}
+
+.settings-content label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.settings-content input {
+    margin-right: 10px;
+}
+
+#logo-img {
+    width: 25px;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+/* Уменьшение изображений в 2 раза */
+.message img {
+    max-width: 50%; /* Уменьшаем ширину в 2 раза */
+    height: auto; /* Сохраняем пропорции */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: transform 0.2s ease; /* Плавное увеличение при наведении */
+}
+
+/* Увеличение изображений при наведении */
+.message img:hover {
+    transform: scale(1.05); /* Небольшое увеличение */
+}
+
+/* Стили для полноэкранного режима */
+.fullscreen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Темный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Поверх всех элементов */
+}
+
+.fullscreen-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Сохраняем пропорции */
+    cursor: pointer;
+}
